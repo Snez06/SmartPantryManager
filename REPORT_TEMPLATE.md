@@ -3,10 +3,15 @@
 ## ANDROID MOBILE APPLICATION DEVELOPMENT PROJECT REPORT
 
 **Student Name:** Sinetemba Xhosa
+
 **Student Number:** 402412872
+
 **Module:** Mobile Application Development 700
+
 **Institution:** Richfield Graduate Institute of Technology
+
 **Programme:** Bachelor of Science in Information Technology
+
 **Submission Date:** 30/09/2026
 
 **GitHub Repository:**
