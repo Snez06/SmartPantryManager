@@ -4,16 +4,10 @@
 
 ## Cover Page
 - App: Smart Pantry Manager
-- Name and Surname: [YOUR NAME]
-- Student ITS No: [YOUR ITS NUMBER]
+- Name and Surname: Sinetemba Xhosa
+- Student ITS No: 402412872
 - Module: Mobile App Development 700
-- Date: [DATE]
-
-## Declaration of Originality
-Insert and sign the declaration supplied on the assignment cover page.
-
-## Table of Contents
-Generate automatically in Word after applying heading styles.
+- Date: 30/09/2026
 
 ## 1. Introduction
 Describe the food-waste problem and the purpose of tracking leftover pantry ingredients and matching recipes strictly to available ingredients.
@@ -34,7 +28,6 @@ Pantry List -> Settings
 Explain the relationship between recipe and recipe_ingredient.
 
 ## 3. Screenshots and Core Functions
-Insert your own screenshots with captions:
 - Pantry list
 - Add ingredient
 - Validation error
@@ -46,16 +39,7 @@ Insert your own screenshots with captions:
 - Settings
 - Persistence after reopening
 
-## 4. Key Code Snippets
-Use 3-5 short snippets from the actual submitted code and explain:
-1. SQLite schema/CRUD
-2. RecyclerView Adapter
-3. Intent navigation
-4. Strict matching
-5. SharedPreferences (optional)
 
-## 5. Challenges and Solutions
-Describe 2-3 real issues you encountered, the cause, the solution, and how you verified the fix.
 
 ## 6. Conclusion and Reflection
 Explain what you learned about Activities, lifecycle, layouts, Intents, adapters, SQLite, validation and testing. State realistic future improvements.
