@@ -1,81 +1,256 @@
-# Smart Pantry Manager
+# SmartPantryManager
 
-Java Android application for Mobile App Development 700. The app stores pantry ingredients locally with SQLite and suggests recipes only when **every required ingredient is present in sufficient quantity**.
+## Android Mobile Application
 
-## Assignment alignment
-- Java only; Android Studio project.
-- Five Activities: Pantry List, Add/Edit Ingredient, Suggested Recipes, Recipe Detail, Settings.
-- RecyclerView + custom PantryAdapter and RecipeAdapter.
-- SQLiteOpenHelper with three tables and 18 seeded recipes.
-- Full pantry CRUD and persistence between launches.
-- Strict recipe matching with quantity checks, kg/g and L/ml conversion, and simple singular/plural normalization.
-- SharedPreferences for the optional Almost-There setting.
-- Bottom navigation between Pantry, Recipes and Settings.
-- No Maps, GPS, location SDK, payments or Play Store publishing code.
+SmartPantryManager is an Android mobile application developed to help users manage pantry ingredients by recording important information such as the ingredient name, quantity, and expiry date.
 
-## Open and run in Android Studio
-1. Extract/open the `SmartPantryManager` folder.
-2. Android Studio -> File -> Open -> select the project folder.
-3. Allow Gradle sync and install any SDK components Android Studio requests.
-4. Ensure a JDK 17-compatible Gradle JDK is selected under Settings/Preferences -> Build, Execution, Deployment -> Build Tools -> Gradle.
-5. Create an Android Virtual Device in Device Manager (for example a Pixel device with an installed API 35 image), or connect an Android phone with USB debugging enabled.
-6. Select the `app` run configuration and the emulator/phone.
-7. Click Run.
+The application provides a simple interface for adding and managing pantry items from an Android device.
 
-If Android Studio asks to upgrade the Android Gradle Plugin, do not upgrade it immediately for the assessment. First get the supplied project running. If your installed Android Studio requires a newer compatible AGP, use its suggested upgrade and test again.
+## Repository
 
-## First-run test sequence
-1. Add: `tomato`, quantity `3`, unit `pcs`.
-2. Add the other ingredients required by a recipe, for example `pasta 200 g`, `onion 1 pcs`, `olive oil 2 tbsp`.
-3. Open Recipes. Tomato Pasta should appear only after all four required ingredients meet the quantities.
-4. Delete one required ingredient and return to Recipes. The recipe must disappear from strict suggestions.
-5. Edit an ingredient and verify the updated value is shown.
-6. Close and reopen the app. Pantry data must still exist.
-7. Trigger validation by attempting to save an empty name or zero/negative quantity.
-8. Open Settings and toggle Almost-There on/off. Almost-There must remain separate from strict suggestions.
+**GitHub:** https://github.com/Snez06/SmartPantryManager
 
-## GitHub workflow required by the brief
-Create the public GitHub repository before development history is finished. Use meaningful incremental commits rather than one final commit. Suggested sequence:
-1. `Initial Android Studio project scaffold`
-2. `Add pantry and recipe model classes`
-3. `Create SQLite schema and seed recipes`
-4. `Implement pantry CRUD data source`
-5. `Build pantry list and custom adapter`
-6. `Add ingredient form and validation`
-7. `Implement strict recipe matching`
-8. `Add suggested recipes and detail screens`
-9. `Add SharedPreferences settings`
-10. `Add bottom navigation`
-11. `Improve empty states and validation`
-12. `Add README and final cleanup`
+## Features
 
-Commands after creating the GitHub repository:
+* Add pantry ingredients
+* Enter an ingredient name
+* Enter the quantity of an ingredient
+* Record an expiry date
+* View recorded pantry items
+* Validate required input
+* Manage pantry information through an Android mobile interface
+
+## Technologies Used
+
+* **Android Studio**
+* **Java**
+* **Android SDK**
+* **XML**
+* **Gradle**
+* **Git**
+* **GitHub**
+
+## Requirements
+
+To build and run this project, you will need:
+
+* Android Studio
+* Android SDK
+* Java Development Kit (JDK)
+* An Android Emulator or physical Android device
+* Internet connection for the initial Gradle dependency download
+
+## Getting Started
+
+### 1. Clone the Repository
+
+Open Command Prompt, PowerShell, or a terminal and run:
+
 ```bash
-git init
-git add .
-git commit -m "Initial Android Studio project scaffold"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/SmartPantryManager.git
-git push -u origin main
+git clone https://github.com/Snez06/SmartPantryManager.git
 ```
-For subsequent changes:
+
+Move into the project directory:
+
+```bash
+cd SmartPantryManager
+```
+
+### 2. Open the Project in Android Studio
+
+1. Open **Android Studio**.
+2. Select **Open**.
+3. Navigate to the `SmartPantryManager` folder.
+4. Select the project.
+5. Allow Android Studio to complete the Gradle synchronisation.
+6. Wait until indexing and synchronisation are complete.
+
+### 3. Build the Project
+
+From Android Studio:
+
+**Build → Make Project**
+
+Wait for the build process to complete successfully.
+
+## Running the Application
+
+### Android Emulator
+
+1. Open **Device Manager** in Android Studio.
+2. Create an Android Virtual Device if one does not already exist.
+3. Start the emulator.
+4. Select the running emulator from the device selector.
+5. Click the **Run ▶** button.
+
+### Physical Android Device
+
+1. Enable **Developer Options** on the Android device.
+2. Enable **USB Debugging**.
+3. Connect the device to the computer.
+4. Accept the USB debugging permission when prompted.
+5. Select the connected device in Android Studio.
+6. Click **Run ▶**.
+
+## Using the Application
+
+After launching SmartPantryManager:
+
+1. Enter the **Ingredient Name**.
+2. Enter the **Quantity**.
+3. Enter the **Expiry Date**.
+4. Submit/save the pantry item.
+5. Confirm that the ingredient has been added successfully.
+6. Add additional ingredients when required.
+
+### Example
+
+| Field           | Example    |
+| --------------- | ---------- |
+| Ingredient Name | Rice       |
+| Quantity        | 2 kg       |
+| Expiry Date     | 31/12/2026 |
+
+## Input Requirements
+
+The following information is required when adding an ingredient:
+
+* Ingredient name
+* Quantity
+* Expiry date
+
+The application should prevent incomplete pantry records from being submitted.
+
+## Testing
+
+The application can be tested using the following scenarios.
+
+### Test Case 1 — Add Ingredient
+
+1. Launch the application.
+2. Enter a valid ingredient name.
+3. Enter a quantity.
+4. Enter an expiry date.
+5. Save the record.
+6. Verify that the ingredient appears correctly.
+
+### Test Case 2 — Empty Required Fields
+
+1. Leave one or more required fields empty.
+2. Attempt to save the record.
+3. Verify that the application handles the missing information appropriately.
+
+### Test Case 3 — Multiple Ingredients
+
+1. Add several pantry ingredients.
+2. Enter different quantities and expiry dates.
+3. Verify that the records are displayed correctly.
+
+## Git and GitHub
+
+The project uses Git for version control and GitHub for source-code management.
+
+Repository:
+
+https://github.com/Snez06/SmartPantryManager
+
+### Check Project Status
+
+```bash
+git status
+```
+
+### Stage Changes
+
 ```bash
 git add .
-git commit -m "Describe the specific change"
+```
+
+### Commit Changes
+
+```bash
+git commit -m "Update SmartPantryManager"
+```
+
+### Push Changes
+
+```bash
 git push
 ```
 
-## Video demonstration plan (5-7 minutes)
-Follow the assignment's required order:
-- ~1 min: GitHub repository, README and commit history.
-- ~2-3 min: live app; add, view, edit, delete, strict matching, and persistence after reopening.
-- ~2-3 min: explain Activity lifecycle/onResume, SQLite end-to-end, RecyclerView/Adapter, Intents, and strict matching using your actual code.
-- ~30-60 sec: justify SQLite as local on-device persistent storage for a pantry app.
+### Pull Latest Changes
 
-Do not submit a silent recording. Record your own voice and use actual screenshots of your running app in the report.
+```bash
+git pull
+```
 
-## Submission reminder
-The assignment specifies one ZIP containing the complete Android Studio source, the 5-7 minute MP4 video, and the written report, with unnecessary `build/` and `.gradle/` folders excluded. The total ZIP must be <=50 MB. Rename the final ZIP using your student number and surname before Moodle submission.
+## Troubleshooting
 
-## Academic integrity
-Use this project as a development starting point only if it reflects work you can explain and defend. The assignment declaration states that submitted implementation must be the student's own original work and that the student must be able to explain the code.
+### "No Target Device Found"
+
+If Android Studio displays:
+
+```text
+No target device found
+```
+
+make sure that either:
+
+* An Android Emulator is running, or
+* A physical Android device is connected with USB Debugging enabled.
+
+### Gradle Synchronisation Problems
+
+If Gradle synchronisation fails:
+
+1. Check the internet connection.
+2. Allow Android Studio to download required dependencies.
+3. Select **File → Sync Project with Gradle Files**.
+4. Review the Build Output for errors.
+
+### Build Errors
+
+If the application does not build successfully, try:
+
+```text
+Build → Clean Project
+```
+
+followed by:
+
+```text
+Build → Rebuild Project
+```
+
+Then run the application again.
+
+## Project Purpose
+
+The purpose of SmartPantryManager is to demonstrate the development of an Android mobile application for managing pantry information.
+
+The project demonstrates practical Android development concepts including:
+
+* Android Studio project development
+* User interface design
+* User input handling
+* Data management
+* Input validation
+* Application testing
+* Git version control
+* GitHub repository management
+
+## Author
+
+**Sinetemba Xhosa**
+
+BSc Information Technology
+Richfield Graduate Institute of Technology
+
+## GitHub Repository
+
+[SmartPantryManager](https://github.com/Snez06/SmartPantryManager)
+
+## Academic Use
+
+This application was developed as part of an Android Mobile Application Development academic project.
+
